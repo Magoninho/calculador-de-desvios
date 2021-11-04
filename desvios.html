@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Explicação</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+		integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+
+	<!-- The loading of KaTeX is deferred to speed up page rendering -->
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+		integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+		crossorigin="anonymous"></script>
+
+	<!-- To automatically render math in text elements, include the auto-render extension: -->
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+		integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+		onload="renderMathInElement(document.body);"></script>
+	<style>
+		body {
+			margin: 0;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		.doc {
+			margin: auto;
+			width: 50%;
+			height: 100%;
+			padding: 20px;
+		}
+
+		.katex-display {
+			background-color: aliceblue;
+			width: fit-content;
+			padding: 10px;
+		}
+
+		@media only screen and (max-width: 1000px) {
+			.doc {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="doc">
+		<h1 id="desvios">Desvios</h1>
+		<h2 id="desvio-relativo">Desvio relativo</h2>
+		<p>$$
+			D_r(x_i) = x_i - \bar{x}
+			$$</p>
+		<h2 id="desvio-absoluto">Desvio absoluto</h2>
+		<p>Valor absoluto do seu desvio relativo
+			$$
+			D_a(x_i) = |x_i - \bar{x}|=|D_r(x_i)|
+			$$</p>
+		<h3 id="desvio-medio-absoluto">Desvio médio absoluto</h3>
+		<p>É a média aritimética dos desvios absolutos de todos os termos de uma amostra</p>
+		<p>
+			$$
+			D_{ma}=\frac{\sum_{i=1}^{n} |x_i - \bar{x}|}{n}
+			$$</p>
+		<h2 id="desvio-padrao">Desvio padrão</h2>
+		<p>$$
+			\sigma = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}}
+			$$</p>
+		<p>De outra maneira, pode-se definir como sendo a raiz quadrada da variância:
+			$$
+			\sigma = \sqrt{v}
+			$$</p>
+		<h1 id="variancia">Variância</h1>
+		<p>$$
+			\sigma = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}
+			$$</p>
+
+		<p>
+			$$
+			v = \sigma^2
+			$$
+		</p>
+	</div>
+
+
+</body>
+
+</html>
