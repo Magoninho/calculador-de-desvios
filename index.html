@@ -4,14 +4,19 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style.css">
 	<title>Calculadora de desvios</title>
 </head>
 <body>
 	<h1>Calculadora de Desvios</h1>
 	<h2>Desvio relativo</h2>
-	<input type="text" id="desvio_relativo"> (separe com espaços)
+	<div id="desvio_relativo">
+		<input type="text" class="input"><br>
+	</div>
+	<button onclick="addInput('desvio_relativo')">+</button>
+	<button onclick="removeInput('desvio_relativo')">-</button>
 	<br><br>
-	<button onclick="">Calcular</button> 
+	<button onclick="">Calcular</button>	
 <!-- splitToInt(document.getElementById('desvio_relativo').value, ' ') -->
 
 
