@@ -1,3 +1,5 @@
+// Tudo em prol da ciência
+
 function desvioRelativo(numbers) {
 	let avg = avarage(numbers);
 	let desvios = [];

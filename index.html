@@ -32,14 +32,19 @@
 <body>
 
 	<h1>Calculadora de Desvios</h1>
-	<a href="desvios.html">Explicação</a><br><br>
-	<div id="desvio_relativo">
-		<input type="number" value="0" class="input"><br>
-	</div>
-	<button onclick="addInput('desvio_relativo')">+</button>
-	<button onclick="removeInput('desvio_relativo')">-</button>
+	<a href="desvios.html">Explicação</a>
+	<a href="https://github.com/Magoninho/calculador-de-desvios">GitHub</a>
+	<a href="sobre.html">Sobre</a>
+
+	<h2>Valores</h2>
+	<div id="input_div">
+		<input type="text" value="0" class="input"></div>
+	<br>
+	<button onclick="addInput('input_div')">+</button>
+	<button onclick="removeInput('input_div')">-</button>
 	<br><br>
-	<button onclick="desvioRelativoResult(desvioRelativo(getInputData()))">DESVIO RELATIVO</button><br><br>
+	<h2>Calcular</h2>
+	<button onclick="desvioRelativoResult(desvioRelativo(getInputData()))">DESVIO RELATIVO</button>
 	<button onclick="desvioAbsolutoResult(desvioAbsoluto(getInputData()))">DESVIO ABSOLUTO</button>
 	<!-- splitToInt(document.getElementById('desvio_relativo').value, ' ') -->
 
