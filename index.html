@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/style.css">
 	<title>Calculadora de desvios</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+		integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+
+	<!-- The loading of KaTeX is deferred to speed up page rendering -->
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+		integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+		crossorigin="anonymous"></script>
+
+	<!-- To automatically render math in text elements, include the auto-render extension: -->
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+		integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+		onload="renderMathInElement(document.body);"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+		integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+		integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+		crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+		integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+		onload="renderMathInElement(document.body);"></script>
 </head>
+
 <body>
+
 	<h1>Calculadora de Desvios</h1>
-	<h2>Desvio relativo</h2>
 	<div id="desvio_relativo">
-		<input type="text" class="input"><br>
+		<input type="number" value="0" class="input"><br>
 	</div>
 	<button onclick="addInput('desvio_relativo')">+</button>
 	<button onclick="removeInput('desvio_relativo')">-</button>
 	<br><br>
-	<button onclick="">Calcular</button>	
-<!-- splitToInt(document.getElementById('desvio_relativo').value, ' ') -->
+	<button onclick="desvioRelativoResult(desvioRelativo(getInputData()))">DESVIO RELATIVO</button><br><br>
+	<button onclick="desvioAbsolutoResult(desvioAbsoluto(getInputData()))">DESVIO ABSOLUTO</button>
+	<!-- splitToInt(document.getElementById('desvio_relativo').value, ' ') -->
 
+	<div id="result">
 
+	</div>
 	<script src="scripts/utils.js"></script>
 	<script src="scripts/calculators.js"></script>
 	<script src="scripts/main.js"></script>
-
 </body>
+
 </html>

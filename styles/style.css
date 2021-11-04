@@ -1,3 +1,8 @@
-input[type=text] {
-	width: 30px;
+input[type=number] {
+	width: 42px;
+}
+
+button {
+	font-size: x-large;
+	font-family: monospace;
 }
