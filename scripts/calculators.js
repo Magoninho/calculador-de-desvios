@@ -60,6 +60,8 @@ function desvioRelativoResult(results) {
 		const element = math[m];
 		katex.render(element.textContent, element);
 	}
+
+	window.scrollTo(0,document.body.scrollHeight);
 }
 
 function desvioAbsolutoResult(results) {
@@ -83,6 +85,8 @@ function desvioAbsolutoResult(results) {
 		const element = math[m];
 		katex.render(element.textContent, element);
 	}
+
+	window.scrollTo(0,document.body.scrollHeight);
 }
 
 function desvioMedioAbsolutoResult(result) {
@@ -104,4 +108,6 @@ function desvioMedioAbsolutoResult(result) {
 		const element = math[m];
 		katex.render(element.textContent, element);
 	}
+
+	window.scrollTo(0,document.body.scrollHeight);
 }
