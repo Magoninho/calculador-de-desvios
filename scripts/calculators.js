@@ -21,15 +21,26 @@ function desvioAbsoluto(numbers) {
 }
 
 function desvioMedioAbsoluto(numbers) {
-	let somaDesviosAbsolutos = 0;
+	let soma = 0;
 	let desvios = desvioAbsoluto(numbers);
 	for (let a = 0; a < desvios.length; a++) {
 		const number = desvios[a];
-		somaDesviosAbsolutos += number;
+		soma += number;
 	}
 
-	return somaDesviosAbsolutos / desvios.length;
+	return soma / desvios.length;
 
+}
+
+function variancia(numbers) {
+	let soma = 0;
+	let desvios = desvioRelativo(numbers);
+	for (let i = 0; i < desvios.length; i++) {
+		const number = desvios[i];
+		soma += number*number;
+	}
+
+	return soma / desvios.length;
 }
 
 
@@ -100,6 +111,28 @@ function desvioMedioAbsolutoResult(result) {
 	span.innerHTML +=
 		`D_{ma}=\\frac{\\sum_{i=1}^{n} |x_{i} - \\bar{x}|}{n} = ${result}`;
 	// D_{ma}=\frac{\sum_{i=1}^{n} |x_{${n + 1}} - \bar{x}|}{n}
+	div.appendChild(span);
+	div.innerHTML += "<br>";
+
+	let math = document.getElementsByClassName("math");
+	for (let m = 0; m < math.length; m++) {
+		const element = math[m];
+		katex.render(element.textContent, element);
+	}
+
+	window.scrollTo(0,document.body.scrollHeight);
+}
+
+function varianciaResult(result) {
+	let div = document.getElementById("result");
+
+	div.innerHTML = `
+	<h1>Resultado: </h1>
+	`;
+	let span = document.createElement("span");
+	span.className = "math";
+	span.innerHTML +=
+		`\\sigma = \\frac{\\sum_{i=1}^{n} (x_i - \\bar{x})^2}{n} = ${result}`;
 	div.appendChild(span);
 	div.innerHTML += "<br>";
 
