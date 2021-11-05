@@ -20,6 +20,25 @@ function desvioAbsoluto(numbers) {
 	return desvios;
 }
 
+function desvioMedioAbsoluto(numbers) {
+	let somaDesviosAbsolutos = 0;
+	let desvios = desvioAbsoluto(numbers);
+	for (let a = 0; a < desvios.length; a++) {
+		const number = desvios[a];
+		somaDesviosAbsolutos += number;
+	}
+
+	return somaDesviosAbsolutos / desvios.length;
+
+}
+
+
+/*
+
+RESULTADOS
+
+*/
+
 function desvioRelativoResult(results) {
 	let div = document.getElementById("result");
 
@@ -32,7 +51,7 @@ function desvioRelativoResult(results) {
 		let span = document.createElement("span");
 		span.className = "math";
 		span.innerHTML +=
-		`D_r(x_{${n + 1}}) = x_{${n + 1}} - \\bar{x} = ${result}`;
+			`D_r(x_{${n + 1}}) = x_{${n + 1}} - \\bar{x} = ${result}`;
 		div.appendChild(span);
 		div.innerHTML += "<br>";
 	}
@@ -55,7 +74,7 @@ function desvioAbsolutoResult(results) {
 		let span = document.createElement("span");
 		span.className = "math";
 		span.innerHTML +=
-		`D_r(x_{${n + 1}}) = |x_{${n + 1}} - \\bar{x}| = ${result}`;
+			`D_a(x_{${n + 1}}) = |x_{${n + 1}} - \\bar{x}| = ${result}`;
 		div.appendChild(span);
 		div.innerHTML += "<br>";
 	}
@@ -66,3 +85,23 @@ function desvioAbsolutoResult(results) {
 	}
 }
 
+function desvioMedioAbsolutoResult(result) {
+	let div = document.getElementById("result");
+
+	div.innerHTML = `
+	<h1>Resultado: </h1>
+	`;
+	let span = document.createElement("span");
+	span.className = "math";
+	span.innerHTML +=
+		`D_{ma}=\\frac{\\sum_{i=1}^{n} |x_{i} - \\bar{x}|}{n} = ${result}`;
+	// D_{ma}=\frac{\sum_{i=1}^{n} |x_{${n + 1}} - \bar{x}|}{n}
+	div.appendChild(span);
+	div.innerHTML += "<br>";
+
+	let math = document.getElementsByClassName("math");
+	for (let m = 0; m < math.length; m++) {
+		const element = math[m];
+		katex.render(element.textContent, element);
+	}
+}

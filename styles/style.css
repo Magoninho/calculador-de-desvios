@@ -47,3 +47,9 @@ body {
 	color: white;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.katex {
+	background-color: #212327;
+	padding: 10px;
+	font-size: 25pt !important;
+}
