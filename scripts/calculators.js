@@ -1,5 +1,10 @@
 // Tudo em prol da ciência
 
+/**
+ * Calcula desvio relativo
+ * @param {Number[]} numbers An array of numbers
+ * @returns {Number[]} desvios
+ */
 function desvioRelativo(numbers) {
 	let avg = avarage(numbers);
 	let desvios = [];
@@ -11,6 +16,11 @@ function desvioRelativo(numbers) {
 	return desvios;
 }
 
+/**
+ * Calcula desvio absoluto
+ * @param {Number[]} numbers An array of numbers
+ * @returns {Number[]} desvios
+ */
 function desvioAbsoluto(numbers) {
 	let desvios = [];
 	for (let i = 0; i < desvioRelativo(numbers).length; i++) {
@@ -20,6 +30,11 @@ function desvioAbsoluto(numbers) {
 	return desvios;
 }
 
+/**
+ * Calcula desvio medio absoluto
+ * @param {Number[]} numbers An array of numbers
+ * @returns {Number} desvio
+ */
 function desvioMedioAbsoluto(numbers) {
 	let soma = 0;
 	let desvios = desvioAbsoluto(numbers);
@@ -32,6 +47,11 @@ function desvioMedioAbsoluto(numbers) {
 
 }
 
+/**
+ * Calcula variancia
+ * @param {Number[]} numbers An array of numbers
+ * @returns {Number} variância
+ */
 function variancia(numbers) {
 	let soma = 0;
 	let desvios = desvioRelativo(numbers);
